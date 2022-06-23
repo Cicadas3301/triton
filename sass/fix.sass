@@ -1,0 +1,89 @@
+.skil
+    &__cart
+        &::after
+            transition: .3s
+        &:hover
+            &::after
+                width: 0
+            .skil__link
+                img
+                    width: 35px
+                    filter: brightness(0.5)
+    &__link
+        img
+            width: 100%
+            width: 24px
+            height: 17px
+            transition: .3s
+        a
+            display: inline-flex
+.header
+    &__menu
+        .menu__item-drop
+            width: auto
+            min-width: 100%
+            a
+                white-space: nowrap
+    .offer
+        &__title
+            span
+                font-size: inherit
+                line-height: inherit
+                font-weight: inherit
+                text-transform: inherit
+            &-big
+                font-size: 95px
+                line-height: 90px
+                font-weight: 400
+                text-transform: uppercase
+            p
+                margin: 0
+
+.help
+    .form__set
+        p 
+            a
+                text-decoration: underline
+
+.footer
+    &__link
+        padding-left: 0
+        margin-left: auto
+    &__wrapper
+        padding-right: 70px
+
+.corporative
+    &__list
+        &-title
+            img
+                transition: .3s
+        &-item
+            &:hover                    
+                .corporative__list-title 
+                    img
+                        width: 35px
+
+.person
+    .photo
+        border: none
+        position: relative
+        padding-left: 0
+        &::after
+            content: ''
+            background: #2ea4e7
+            top: 0
+            left: -22px
+            width: 2px
+            height: 100%
+            position: absolute
+
+.popup .fancybox-button 
+    svg
+        transition: .3s
+        &:hover
+            transform: rotate(-45deg)
+
+.offer
+    &__title
+        display: flex
+        flex-direction: column
