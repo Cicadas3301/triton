@@ -87,6 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	telInp.each(function () {
 		$(this).mask("+79999999999");
-    });
+	});
+	
+	if (window.matchMedia("(max-width: 991.90px)").matches) {
+		$('.header__menu, .header__link').appendTo('.header_mob');
+		$('.header_toggle').on('click', function () {
+			$('.header_mob').toggleClass('active');
+			$('.header').toggleClass('active');
+		})
+	}
 
 });

@@ -1,5 +1,9 @@
+*
+    box-sizing: border-box
+    
 .skil
     &__cart
+        width: 33%
         &::after
             transition: .3s
         &:hover
@@ -26,11 +30,6 @@
                 white-space: nowrap
     .offer
         &__title
-            span
-                font-size: inherit
-                line-height: inherit
-                font-weight: inherit
-                text-transform: inherit
             &-big
                 font-size: 95px
                 line-height: 90px
@@ -38,6 +37,8 @@
                 text-transform: uppercase
             p
                 margin: 0
+            span
+                display: flex
 
 .help
     .form__set
@@ -87,3 +88,923 @@
     &__title
         display: flex
         flex-direction: column
+
+.import
+    &__cart
+        width: calc(100% / 6 - 25px)
+        padding: 40px 0
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            max-width: 100%
+
+@media (max-width: 1500px)
+    .person
+        .text
+            padding-right: 50px
+            padding-left: 50px
+    .header
+        // &__navigation
+            // justify-content: space-between
+        &__menu
+            padding-left: 50px
+            .menu__item
+                padding-right: 25px
+        &__link
+            margin-left: auto
+            margin-right: 50px
+            padding-left: 0
+            .login
+                padding-left: 25px
+
+    .region
+        &__map
+            width: 75%
+            img
+                width: 100%
+
+    .corporative
+        &__wrapper
+            justify-content: space-between
+        &__cart
+            width: 34%
+        &__list
+            width: 64%
+
+    .history
+        &__img
+            min-width: 210px
+            width: 210px
+            img
+                max-width: 100%
+                width: 100%
+
+    .directory
+        &__cart
+            width: 32%
+            .img
+                width: 100%
+                height: auto
+                img
+                    width: 100%
+
+    .news
+        &__offer
+            padding-right: 75px
+        &__item
+            padding-left: 40px
+
+    .help
+        .form
+            &__set
+                padding-right: 100px
+
+@media (max-width: 1380px)
+    .header
+        &__menu
+            padding-left: 30px
+            .menu__item
+                padding-right: 15px
+        &__link
+            margin-right: 25px
+
+    .export
+        &__wrapp
+            padding-left: 70px
+
+    .skil
+        &__cart
+            width: 26%
+
+    .import
+        &__title, &__link
+            width: 80%
+        &__cart
+            padding: 30px 5px
+
+    .help
+        .form
+            &__wrapp
+                width: 100%
+                max-width: 100%
+            &__title
+                font-size: 52px
+            &__subtitle
+                width: 100%
+            &__set
+                padding-right: 100px
+                padding-left: 50px
+                p
+                    font-size: 14px
+
+    .footer
+        &__menu
+            padding-left: 100px
+            .menu
+                &__item
+                    padding-right: 30px
+                &__link
+                    img
+                        display: none
+
+.footer
+    &__social
+        display: none
+
+.d-none
+    display: none!important
+
+@media (min-width: 991.90px)
+    .d-lg-none
+        display: none!important
+@media (min-width: 767.90px)
+    .d-md-none
+        display: none!important
+@media (min-width: 576.90px)
+    .d-sm-none
+        display: none!important
+
+@media (max-width: 1200px)
+
+    .product
+        .corporative
+            &__cart
+                display: none
+
+    .container
+        max-width: 940px
+    
+    .header
+        .offer
+            padding-top: 80px
+            padding-bottom: 140px
+            &__title
+                font-size: 42px
+                line-height: 1.35
+                span
+                    line-height: inherit
+                    font-size: 42px
+            &__subtitle
+                width: 40%
+                padding: 35px 0
+        &__menu
+            padding-left: 15px
+            .menu
+                &__item
+                    padding-right: 10px
+                &__link
+                    font-size: 14px
+                    svg
+                        margin-left: 8px
+        &__logo
+            .img
+                display: flex
+            img
+                width: 125px
+        &__link
+            font-size: 16px
+            margin-right: 0
+            span
+                font-size: 16px
+            .tel
+                font-size: 16px
+            .login
+                font-size: 16px
+                img
+                    margin-right: 8px
+
+    .export
+        padding: 100px 0
+        &__title
+            font-size: 42px
+            line-height: 1.15
+            padding-bottom: 30px
+        &__subtitle
+            width: 100%
+            padding-bottom: 45px
+        .container
+            flex-direction: column
+        &__img
+            width: 100%
+            img
+                height: 280px
+                width: 50%
+        &__wrapp
+            padding-left: 0
+            margin-top: 25px
+
+    .skil
+        .container
+            align-items: stretch
+        &__cart
+            width: 40%
+            min-height: 0
+    
+    .import
+        &__title, &__link
+            width: 100%
+        &__title
+            font-size: 42px
+            padding-bottom: 35px
+        &__wrapper
+            flex-wrap: wrap
+            padding-top: 15px
+            padding-bottom: 80px
+        &__cart
+            margin-top: 20px
+            padding: 20px 5px
+            width: calc(100% / 3 - 25px)
+
+    .region
+        &__title
+            width: 100%
+            font-size: 42px
+            padding-bottom: 20px
+        &__link
+            width: 100%
+        &__wrapper
+            flex-direction: column
+            align-items: flex-start
+        &__map
+            width: 100%
+        &__list
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+        &__item
+            width: 48%
+            flex-direction: column
+            align-items: flex-start
+
+    .footer
+        &__menu
+            padding-left: 40px
+            .menu
+                &__item
+                    padding-right: 12px
+                &__link
+                    font-size: 16px
+        &__link
+            span
+                font-size: 16px
+            .tel
+                font-size: 16px
+
+    .help
+        .form
+            padding: 50px 30px
+            flex-direction: column
+            &__set
+                padding: 0
+                margin-top: 35px
+                p
+                    margin-bottom: 0
+                    a
+                        font-size: inherit
+
+    .page 
+        .header__menu 
+            .nav 
+                .menu 
+                    .menu__item
+                        padding-right: 0
+                        .menu__link
+                            padding-left: 7px
+                            padding-right: 7px
+        .header
+            &__link
+                .login
+                    padding-left: 8px
+            &__logo
+                display: flex
+                align-items: center
+                padding-top: 0
+                .img
+                    display: flex
+
+    .person
+        padding-bottom: 100px
+        flex-wrap: wrap
+        justify-content: flex-start
+        .anchor
+            width: 30%
+            order: 1
+        .photo
+            width: 70%
+            order: 2
+            &::after
+                display: none
+            img
+                max-width: 100%
+        .text
+            border-top: 2px solid #2ea4e7
+            padding-top: 10px
+            margin-top: 15px
+            order: 3
+            width: 100%
+            padding-left: 0
+
+    .corporative
+        &__wrapper
+            flex-wrap: wrap
+        &__cart
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-bottom: 60px
+        &__img
+            width: 35%
+            img
+                width: 100%
+        &__text
+            width: 62%
+            padding-top: 0
+        &__name
+            width: 100%
+            text-align: right
+        &__position
+            width: 100%
+            text-align: right
+        &__list
+            width: 100%
+
+    .history
+        padding: 70px 0
+        &__wrapper
+            flex-direction: column
+        .title
+            width: 100%
+            line-height: 1.15
+            font-size: 42px
+            br
+                display: none
+            span
+                font-size: 100px
+                padding-top: 15px
+        &__gallery
+            width: 100%
+            padding-top: 70px
+            &-left
+                .history__wrapp
+                    &:last-child
+                        margin-bottom: 0
+            .line
+                height: 100%
+        &__wrapp
+            .date
+                font-size: 48px
+                line-height: 1
+            .text
+                margin-top: 10px
+                margin-bottom: 5px
+                font-size: 15px
+                line-height: 1.15
+        &__counter
+            width: 100%
+            padding-top: 70px
+            &-item
+                width: 25%
+                margin-bottom: 35px
+
+    .directory
+        padding: 80px 0
+
+    .news
+        &__wrapper
+            flex-direction: column
+        &__offer
+            width: 100%
+            padding-right: 0
+        &__list
+            width: 100%
+            margin-top: 40px
+            border: none
+            border-top: 1px solid #000
+        &__title
+            margin-bottom: 25px
+        &__img
+            max-width: 100%
+            width: 100%
+            img
+                height: 450px
+                width: 100%
+        &__item
+            padding: 25px 0px 35px
+            &:last-child
+                padding-top: 25px
+
+@media (max-width: 991.90px)
+
+    .region
+        &__wrapper
+            padding-bottom: 100px
+
+    .breadcrumbs
+        ul
+            padding-bottom: 25px
+            padding-top: 25px
+
+    .header.page
+        .header__navigation
+            align-items: center
+
+    .about
+        &__title
+            font-size: 52px
+            line-height: 1
+
+    .history
+        .title
+            font-size: 36px
+            span
+                font-size: 80px
+                padding-top: 10px
+        &__wrapp
+            flex-direction: column-reverse
+        &__img
+            width: 100%
+            min-width: 0
+            img
+                height: 180px
+        &__text
+            padding-right: 0
+            padding-top: 10px
+        &__gallery
+            &-right
+                .history__wrapp
+                    flex-direction: column
+        &__counter
+            &-item
+                text-align: center
+                line-height: 1.15
+
+    .directory
+        .title
+            padding-bottom: 40px
+            line-height: 1.15
+            span
+                font-size: 42px
+        
+    .news
+        .title
+            span
+                font-size: 42px
+
+    .person
+        padding-top: 40px
+        padding-bottom: 90px
+        .anchor
+            width: 8%
+            img
+                width: 100%
+        .photo
+            width: 90%
+            display: flex
+            justify-content: flex-end
+        .text
+            padding-right: 0
+            p
+                font-size: 16px
+
+    .container
+        max-width: 730px
+
+    .page
+        .header
+            &__menu
+                .nav
+                    .menu
+                        align-items: flex-end
+
+    .page .header__menu .nav .menu .menu__item .menu__link
+        height: auto
+        padding-left: 0
+        padding-right: 0
+        &.active
+            background-color: transparent
+
+    .page .header__menu .menu__item-drop
+        width: auto
+        background: 0
+
+    .page .header__menu .nav .menu .menu__item .menu__link:hover
+        background: 0
+
+    .page .header__menu
+        height: auto
+        .nav 
+            height: auto
+            .menu
+                height: auto
+
+    .header
+        .offer
+            &__title
+                line-height: 1.15
+                font-size: 38px
+                span
+                    font-size: inherit
+                    // display: inline
+            &__subtitle
+                width: 60%
+        .container
+            position: relative
+            transition: .4s
+        &.active
+            .container:first-child
+                background: #2ea4e7
+        &_toggle
+            margin-left: auto
+        &_mob
+            position: absolute
+            top: 100%
+            left: -140%
+            background: #2ea4e7
+            width: 100%
+            padding: 20px 25px
+            box-sizing: border-box
+            z-index: 5
+            text-align: right
+            height: auto
+            padding-bottom: 20px
+            transition: .4s
+            &.active
+                left: 0
+        &__link
+            justify-content: flex-end
+            margin-top: 35px
+        &__menu
+            padding-left: 0
+            .menu
+                flex-direction: column
+                align-items: flex-end
+                &__item
+                    padding-right: 0
+                    &-drop
+                        position: static
+                        background: 0
+                        padding: 0
+                        min-width: 0
+                        .wrap
+                            padding-left: 0
+                            border-top: 1px solid #fff
+                            border-bottom: 1px solid #fff
+                            margin-bottom: 10px
+                            a
+                                color: #fff
+                                font-size: 18px
+                                padding-bottom: 12px
+                                &:nth-child(1)       
+                                    border: none
+                                    padding-top: 8px
+                                &:last-child
+                                    padding-bottom: 8px
+            .menu__link
+                font-size: 20px
+                margin-bottom: 12px
+                justify-content: flex-end
+                &.active
+                    color: #fff
+                &:hover
+                    color: #fff
+                    svg
+                        transform: rotate(0)
+
+    .export
+        padding: 60px 0
+        &__title
+            font-size: 38px
+        &__subtitle
+            padding-bottom: 20px
+            font-size: 17px
+        
+    .skil
+        padding-bottom: 60px
+        &__cart
+            box-sizing: border-box
+            width: 49%
+            margin-bottom: 30px
+
+    .import
+        &__title
+            font-size: 38px
+
+    .footer
+        &__navigation
+            flex-wrap: wrap
+        &__logo
+            width: 100%
+            margin-bottom: 30px
+            img
+                width: 130px
+        &__menu
+            padding-left: 0
+            .menu
+                &__link
+                    font-size: 17px
+        &__link
+            span, .tel
+                font-size: 17px
+        &__wrapper
+            padding-right: 0
+            margin-top: 30px
+
+@media (max-width: 767.90px)
+
+    .container
+        max-width: 540px
+
+    .header
+        .offer
+            &__title
+                font-size: 32px
+            &__subtitle
+                width: 100%
+                padding: 20px 0
+
+    .btn
+        width: 250px
+        height: 60px
+
+    .export
+        padding: 40px 0
+        &__title
+            font-size: 32px
+        &__subtitle
+            padding-bottom: 15px
+            font-size: 16px
+        
+    .skil
+        padding-bottom: 40px
+        &__cart
+            margin-bottom: 20px
+            padding: 30px 20px
+        &__text
+            font-size: 15px
+
+    .import
+        &__title
+            line-height: 1.15
+            font-size: 32px
+
+    .region
+        &__wrapper
+            padding-bottom: 70px
+        &__list
+            padding-left: 0
+
+    .footer
+        &__link
+            width: 100%
+            margin-left: 0
+            margin-top: 15px
+
+    .person
+        .anchor
+            display: none
+        .photo
+            width: 100%
+
+    .corporative
+        .title
+            line-height: 1.15
+            font-size: 32px
+            br
+                display: none
+        &__text
+            font-size: 16px
+            line-height: 1.15
+            padding-bottom: 20px
+
+    .history
+        padding: 40px 0
+        .title
+            font-size: 32px
+        &__gallery
+            padding-top: 35px
+        &__img
+            img
+                height: 140px
+        &__text
+            padding-top: 0
+        &__wrapp
+            .date
+                font-size: 42px
+            .text
+                font-size: 14px
+            .info
+                font-size: 16px
+                line-height: 1.15
+                margin-top: 4px
+
+    .history__gallery-right .history__wrapp .history__text
+        padding-left: 5px
+
+    .directory
+        .title
+            span
+                font-size: 32px
+        &__name
+            font-size: 18px
+            padding-top: 15px
+        &__position
+            font-size: 14px
+
+    .news
+        padding-bottom: 80px
+        .title
+            padding-bottom: 40px
+            span
+                font-size: 32px
+            a
+                font-size: 20px
+        &__title
+            font-size: 26px
+            line-height: 1.15
+        &__img
+            img
+                height: 350px
+        &__item
+            .title
+                font-size: 26px
+                margin-bottom: 20px
+                line-height: 1.15
+            .text
+                font-size: 16px
+                line-height: 1.15
+
+    .help
+        .form
+            &__title
+                font-size: 36px
+                padding-bottom: 20px
+
+@media (max-width: 567.90px)
+    *
+        box-sizing: border-box
+
+    .about
+        &__title
+            font-size: 32px
+
+    .person
+        padding: 30px 15px 70px
+        .text
+            p
+                font-size: 14px
+
+    .corporative
+        .title
+            font-size: 22px
+            margin-bottom: 20px
+        &__img
+            width: 100%
+        &__text
+            width: 100%
+        &__list
+            &-item
+                width: 100%
+                margin-bottom: 25px
+
+    .history
+        .title
+            font-size: 24px
+        &__counter
+            &-item
+                width: 50%
+
+    .directory
+        .title
+            span
+                font-size: 24px
+        &__wrapper
+            flex-wrap: wrap
+        &__cart
+            width: 100%
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+
+    .news
+        .title
+            span
+                font-size: 22px
+            a
+                font-size: 16px
+        &__title
+            font-size: 22px
+        &__img
+            img
+                height: 250px
+        &__item
+            .title
+                font-size: 22px
+                padding-bottom: 0
+                margin-bottom: 15px
+
+    .header
+        &__link
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-end
+        .tel
+            margin: 7px 0
+            &::before
+                display: none
+        .offer
+            padding: 50px 15px 70px
+            &__title
+                font-size: 23px
+            &__subtitle
+                font-size: 14px
+
+    .container
+        max-width: none
+
+    .skil
+        &__cart
+            width: 100%
+
+    .export
+        &__wrapp
+            margin-top: 12px
+        &__title
+            padding: 15px 0
+            font-size: 23px
+        &__subtitle
+            font-size: 14px
+            line-height: 1.2
+        &__img
+            img
+                width: 65%
+        &__link
+            font-size: 16px
+            img
+                margin-top: 0
+
+    .import
+        &__title
+            font-size: 23px
+            padding-bottom: 30px
+        &__link
+            a
+                font-size: 16px
+                img
+                    margin-left: 10px
+        &__cart
+            width: 48%
+            padding: 15px
+        &__wrapper
+            padding-bottom: 40px
+
+    .region
+        &__dot
+            margin-right: 0
+            img
+                width: 20px
+        &__list
+            &-title
+                font-size: 18px
+            &-subtitle
+                font-size: 16px
+        &__title
+            font-size: 23px
+        &__link
+            a
+                font-size: 16px
+        &__item
+            margin-top: 28px
+            width: 100%
+
+    .help
+        padding-bottom: 35px
+        .form
+            padding: 25px 10px
+            background-size: contain
+            background-position: top right
+            &__title
+                font-size: 23px
+                padding-bottom: 20px
+                line-height: 1.15
+            &__subtitle
+                font-size: 16px
+                line-height: 1.15
+            &__set
+                input
+                    margin-bottom: 30px
+                button
+                    width: 100%
+                    height: 50px
+
+    .footer
+        &__menu
+            .menu
+                &__link
+                    font-size: 14px
+        &__wrapper
+            flex-direction: column
+            justify-content: flex-start
+            font-size: 14px
