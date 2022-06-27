@@ -488,6 +488,8 @@
   }
   .export__img {
     width: 100%;
+    min-width: 0;
+    height: 450px;
   }
   .export__img img {
     height: 280px;
@@ -1096,6 +1098,9 @@
   .export__subtitle {
     padding-bottom: 15px;
     font-size: 16px;
+  }
+  .export__img {
+    height: 320px;
   }
   .skil {
     padding-bottom: 40px;
