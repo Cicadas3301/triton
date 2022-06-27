@@ -97,4 +97,137 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 	}
 
+	var o = $('.count');
+    var cc = 1;
+
+    if (o.length > 0) {
+        include('../libs/countto/jquery.countTo.js');
+
+        $(window).scroll(function(){
+            var targetPos = o.offset().top;
+            var winHeight = $(window).height();
+            var scrollToElem = targetPos - winHeight;
+            var winScrollTop = $(this).scrollTop();
+
+            if (winScrollTop > scrollToElem) {
+                if (cc < 2){
+
+                    cc = cc + 2;
+                    $(document).ready(function () {
+                        $(o).countTo();
+                    });
+                }
+            }
+        });
+	}
+	// data-from="0" data-to="100" data-speed="1700"
+
+    function include(url) {
+        var script = document.createElement('script');
+        script.src = url;
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+	$('.js-count').countTo();
+
+	wow = new WOW(
+      {
+        animateClass: 'animated',
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+	wow.init();
+
+});
+
+$(document).ready(function() {
+	animation1();
+}, 1000);
+
+
+$(".word").lettering();
+
+function animation1() {
+	var title1 = new TimelineMax();
+	title1.staggerFromTo(".word span", 0.5, 
+		{ease: Back.easeOut.config(1.7), opacity: 0, bottom: -80},
+		{ ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 }, 0.05)
+	;
+}
+
+$(".anim").lettering();
+
+var block_show = false;
+ 
+function scrollTracking(){
+	if (block_show) {
+		return false;
+	}
+ 
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $('.anim').offset().top;
+	var eh = $('.anim').outerHeight();
+	var dh = $(document).height();   
+ 
+	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+		block_show = true;
+		
+		function animation() {
+			var title1 = new TimelineMax();
+			title1.staggerFromTo(".anim span", 0.5, 
+				{ease: Back.easeOut.config(1.7), opacity: 0, bottom: -80},
+				{ ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 }, 0.05)
+			;
+		}
+		animation();
+	}
+}
+$(window).scroll(function(){
+	scrollTracking();
+});
+	
+$(document).ready(function(){ 
+	scrollTracking();
+});
+
+$(".anim1").lettering();
+
+var block_show1 = false;
+ 
+function scrollTracking1(){
+	if (block_show1) {
+		return false;
+	}
+
+	var cls = '.anim1'
+	var clsspn = '.anim1 span'
+ 
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $(cls).offset().top;
+	var eh = $(cls).outerHeight();
+	var dh = $(document).height();   
+ 
+	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+		block_show1 = true;
+		
+		function animation2() {
+			var title1 = new TimelineMax();
+			title1.staggerFromTo(clsspn, 0.5, 
+				{ease: Back.easeOut.config(1.7), opacity: 0, bottom: -80},
+				{ ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 }, 0.05)
+			;
+		}
+		animation2();
+	}
+}
+$(window).scroll(function(){
+	scrollTracking1();
+});
+	
+$(document).ready(function(){ 
+	scrollTracking1();
 });

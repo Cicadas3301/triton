@@ -1,6 +1,7 @@
 *
     box-sizing: border-box
-    
+
+
 .skil
     &__cart
         width: 33%
@@ -21,6 +22,7 @@
             transition: .3s
         a
             display: inline-flex
+
 .header
     &__menu
         .menu__item-drop
@@ -38,8 +40,10 @@
             p
                 margin: 0
             span
-                display: flex
-
+                font-size: inherit
+                line-height: inherit
+                font-weight: inherit
+                
 .help
     .form__set
         p 
@@ -98,6 +102,87 @@
         justify-content: center
         img
             max-width: 100%
+
+.export
+    &__title
+        .anim
+            display: inline
+        span
+            display: inline
+            color: #000
+        &-span
+            span
+                color: #2ea4e7
+    &__img
+        background-attachment: fixed
+        background-position: 70%
+        background-repeat: no-repeat
+        background-size: cover
+        background-image: url(../img/export.jpg)
+        width: 453px
+        min-width: 453px
+        height: 550px
+        img
+            display: none
+
+.popup
+    cursor: auto!important
+
+.person
+    .photo
+        &::after
+            transition: .3s
+            display: none
+        &_line
+            content: ''
+            background: #2ea4e7
+            top: 0
+            left: -22px
+            width: 2px
+            transition: .3s
+            position: absolute
+            // height: 100%
+
+.afterheight
+    animation-name: afterheight
+
+@keyframes afterheight
+    0%
+        height: 0
+    to 
+        height: 100%
+
+.afterwidth
+    animation-name: afterwidth
+
+@keyframes afterwidth
+    0%
+        width: 0
+    to 
+        width: 100%
+
+.news
+    &__list
+        position: relative
+        border: none
+    &__item
+        position: relative
+    &_line
+        content: ''
+        position: absolute
+        left: 0
+        width: 1px
+        background: #000
+        top: 0
+        transition: .3s
+        &--horiz
+            content: ''
+            position: absolute
+            left: 0
+            height: 1px
+            background: #000
+            bottom: 0
+            transition: .3s
 
 @media (max-width: 1500px)
     .person
@@ -261,7 +346,7 @@
             .img
                 display: flex
             img
-                width: 125px
+                width: 105px
         &__link
             font-size: 16px
             margin-right: 0
@@ -510,6 +595,23 @@
     .header.page
         .header__navigation
             align-items: center
+
+    .topup
+        &__block
+            flex-direction: column
+            span
+                padding-left: 0
+            img
+                height: 200px
+                width: auto
+                margin-left: auto
+                margin-right: auto
+    .popup
+        padding: 60px 35px
+        .form
+            &__passport
+                &-link
+                    width: 50%
 
     .about
         &__title
@@ -845,6 +947,9 @@
 @media (max-width: 567.90px)
     *
         box-sizing: border-box
+
+    .popup
+        padding: 30px 15px
 
     .about
         &__title

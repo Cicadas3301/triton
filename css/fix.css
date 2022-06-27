@@ -57,9 +57,9 @@
 }
 
 .header .offer__title span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
 }
 
 .help .form__set p a {
@@ -136,6 +136,132 @@
 
 .import__cart img {
   max-width: 100%;
+}
+
+.export__title .anim {
+  display: inline;
+}
+
+.export__title span {
+  display: inline;
+  color: #000;
+}
+
+.export__title-span span {
+  color: #2ea4e7;
+}
+
+.export__img {
+  background-attachment: fixed;
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/export.jpg);
+  width: 453px;
+  min-width: 453px;
+  height: 550px;
+}
+
+.export__img img {
+  display: none;
+}
+
+.popup {
+  cursor: auto !important;
+}
+
+.person .photo::after {
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: none;
+}
+
+.person .photo_line {
+  content: '';
+  background: #2ea4e7;
+  top: 0;
+  left: -22px;
+  width: 2px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: absolute;
+}
+
+.afterheight {
+  -webkit-animation-name: afterheight;
+          animation-name: afterheight;
+}
+
+@-webkit-keyframes afterheight {
+  0% {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes afterheight {
+  0% {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.afterwidth {
+  -webkit-animation-name: afterwidth;
+          animation-name: afterwidth;
+}
+
+@-webkit-keyframes afterwidth {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes afterwidth {
+  0% {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.news__list {
+  position: relative;
+  border: none;
+}
+
+.news__item {
+  position: relative;
+}
+
+.news_line {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1px;
+  background: #000;
+  top: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.news_line--horiz {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background: #000;
+  bottom: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media (max-width: 1500px) {
@@ -666,6 +792,27 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .topup__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .topup__block span {
+    padding-left: 0;
+  }
+  .topup__block img {
+    height: 200px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .popup {
+    padding: 60px 35px;
+  }
+  .popup .form__passport-link {
+    width: 50%;
+  }
   .about__title {
     font-size: 52px;
     line-height: 1;
@@ -1066,6 +1213,9 @@
   * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+  .popup {
+    padding: 30px 15px;
   }
   .about__title {
     font-size: 32px;
