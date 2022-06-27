@@ -3,6 +3,10 @@
           box-sizing: border-box;
 }
 
+.main {
+  overflow: hidden;
+}
+
 .skil__cart {
   width: 33%;
 }
@@ -420,7 +424,7 @@
     font-size: 42px;
     line-height: 1.35;
   }
-  .header .offer__title span {
+  .header .offer__title-big {
     line-height: inherit;
     font-size: 42px;
   }
@@ -922,7 +926,7 @@
     line-height: 1.15;
     font-size: 38px;
   }
-  .header .offer__title span {
+  .header .offer__title-big {
     font-size: inherit;
   }
   .header .offer__subtitle {
