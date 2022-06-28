@@ -186,6 +186,65 @@
             bottom: 0
             transition: .3s
 
+.contacts
+    &_title
+        font-size: 60px
+        line-height: 0.95
+        text-transform: uppercase
+        color: #000
+        margin-bottom: 77px
+    &_wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: stretch
+    &_left
+        width: 573px
+        padding: 140px 40px
+        background: #2EA4E7
+        color: #fff
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            top: 100px
+            left: 0
+            background: #fff
+            width: 120px
+            height: 3px
+        &-item
+            display: flex
+            align-items: center
+        &-text
+            margin-left: 32px
+        &-title
+            margin-bottom: 10px
+            font-size: 24px
+            line-height: 1.15
+        &-desc
+            font-size: 18px
+            line-height: 1.15
+            a
+                color: #fff
+        &-item + &-item
+            margin-top: 50px
+        &-img
+            width: 60px
+            display: flex
+            justify-content: center
+    &_right
+        width: calc(100% - 573px)
+        img
+            max-width: 100%
+            height: 100%
+
+.directory
+    &__tel
+        font-size: 18px
+        line-height: 1.15
+        margin-top: 15px
+        a
+            color: #000
+
 @media (max-width: 1500px)
     .person
         .text
@@ -246,6 +305,7 @@
         .form
             &__set
                 padding-right: 100px
+
 
 @media (max-width: 1380px)
     .header
@@ -313,6 +373,31 @@
         display: none!important
 
 @media (max-width: 1200px)
+
+    .contacts
+        &_title
+            font-size: 48px
+        &_left
+            width: 350px
+            padding: 100px 20px
+            &::after
+                top: 60px
+            &-text
+                margin-left: 15px
+            &-img
+                width: 35px
+                min-width: 35px
+                img, svg
+                    min-width: 100%
+                    max-width: 100%
+                    height: auto
+                    max-height: 35px
+            &-title
+                font-size: 18px
+            &-desc
+                font-size: 16px
+        &_right
+            width: calc(100% - 350px)
 
     .product
         .corporative
@@ -586,6 +671,20 @@
                 padding-top: 25px
 
 @media (max-width: 991.90px)
+
+    .contacts
+        margin-top: 40px
+        &_title
+            font-size: 42px
+        &_left
+            width: 100%
+            padding: 40px 20px
+            &::after
+                display: none
+        &_right
+            width: 100%
+            img
+                max-height: 333px
 
     .region
         &__wrapper
