@@ -25,6 +25,9 @@
         a
             display: inline-flex
 
+.page
+    z-index: 9
+
 .header
     &__menu
         .menu__item-drop
@@ -162,6 +165,30 @@
         width: 0
     to 
         width: 100%
+.directory
+    .title
+        a
+            display: none
+    &__cart
+        .img
+            max-width: 99%
+.dircarousel
+    .owl-nav
+        position: absolute
+        top: -155px
+        right: 15px
+        button
+            font-size: 18px!important
+            color: #000!important
+    .owl-prev
+        transition: .3s
+        &.disabled
+            opacity: 0
+            cursor: auto
+        svg
+            margin-top: 2px
+            margin-right: 15px
+            transform: rotate(-180deg)
 
 .news
     &__list
@@ -288,7 +315,6 @@
 
     .directory
         &__cart
-            width: 32%
             .img
                 width: 100%
                 height: auto
@@ -362,6 +388,9 @@
 .d-none
     display: none!important
 
+@media (min-width: 1199.90px)
+    .d-xl-none
+        display: none!important
 @media (min-width: 991.90px)
     .d-lg-none
         display: none!important
@@ -538,7 +567,7 @@
                     a
                         font-size: inherit
 
-    .page 
+    .page
         .header__menu 
             .nav 
                 .menu 
@@ -670,141 +699,6 @@
             &:last-child
                 padding-top: 25px
 
-@media (max-width: 991.90px)
-
-    .contacts
-        margin-top: 40px
-        &_title
-            font-size: 42px
-        &_left
-            width: 100%
-            padding: 40px 20px
-            &::after
-                display: none
-        &_right
-            width: 100%
-            img
-                max-height: 333px
-
-    .region
-        &__wrapper
-            padding-bottom: 100px
-
-    .breadcrumbs
-        ul
-            padding-bottom: 25px
-            padding-top: 25px
-
-    .header.page
-        .header__navigation
-            align-items: center
-
-    .topup
-        &__block
-            flex-direction: column
-            span
-                padding-left: 0
-            img
-                height: 200px
-                width: auto
-                margin-left: auto
-                margin-right: auto
-    .popup
-        padding: 60px 35px
-        .form
-            &__passport
-                &-link
-                    width: 50%
-
-    .about
-        &__title
-            font-size: 52px
-            line-height: 1
-
-    .history
-        .title
-            font-size: 36px
-            span
-                font-size: 80px
-                padding-top: 10px
-        &__wrapp
-            flex-direction: column-reverse
-        &__img
-            width: 100%
-            min-width: 0
-            img
-                height: 180px
-        &__text
-            padding-right: 0
-            padding-top: 10px
-        &__gallery
-            &-right
-                .history__wrapp
-                    flex-direction: column
-        &__counter
-            &-item
-                text-align: center
-                line-height: 1.15
-
-    .directory
-        .title
-            padding-bottom: 40px
-            line-height: 1.15
-            span
-                font-size: 42px
-        
-    .news
-        .title
-            span
-                font-size: 42px
-
-    .person
-        padding-top: 40px
-        padding-bottom: 90px
-        .anchor
-            width: 8%
-            img
-                width: 100%
-        .photo
-            width: 90%
-            display: flex
-            justify-content: flex-end
-        .text
-            padding-right: 0
-            p
-                font-size: 16px
-
-    .container
-        max-width: 730px
-
-    .page
-        .header
-            &__menu
-                .nav
-                    .menu
-                        align-items: flex-end
-
-    .page .header__menu .nav .menu .menu__item .menu__link
-        height: auto
-        padding-left: 0
-        padding-right: 0
-        &.active
-            background-color: transparent
-
-    .page .header__menu .menu__item-drop
-        width: auto
-        background: 0
-
-    .page .header__menu .nav .menu .menu__item .menu__link:hover
-        background: 0
-
-    .page .header__menu
-        height: auto
-        .nav 
-            height: auto
-            .menu
-                height: auto
-
     .header
         .offer
             &__title
@@ -877,6 +771,145 @@
                     color: #fff
                     svg
                         transform: rotate(0)
+    
+    .page
+        .header
+            &__menu
+                .nav
+                    .menu
+                        align-items: flex-end
+
+    .page .header__menu .nav .menu .menu__item .menu__link
+        height: auto
+        padding-left: 0
+        padding-right: 0
+        &.active
+            background-color: transparent
+
+    .page .header__menu .menu__item-drop
+        width: auto
+        background: 0
+
+    .page .header__menu .nav .menu .menu__item .menu__link:hover
+        background: 0
+
+    .page .header__menu
+        height: auto
+        .nav 
+            height: auto
+            .menu
+                height: auto
+
+    .header.page
+        .header__navigation
+            align-items: center
+
+@media (max-width: 991.90px)
+
+    .contacts
+        margin-top: 40px
+        &_title
+            font-size: 42px
+        &_left
+            width: 100%
+            padding: 40px 20px
+            &::after
+                display: none
+        &_right
+            width: 100%
+            img
+                max-height: 333px
+
+    .region
+        &__wrapper
+            padding-bottom: 100px
+
+    .breadcrumbs
+        ul
+            padding-bottom: 25px
+            padding-top: 25px
+
+    .topup
+        &__block
+            flex-direction: column
+            span
+                padding-left: 0
+            img
+                height: 200px
+                width: auto
+                margin-left: auto
+                margin-right: auto
+    .popup
+        padding: 60px 35px
+        .form
+            &__passport
+                &-link
+                    width: 50%
+
+    .about
+        &__title
+            font-size: 52px
+            line-height: 1
+
+    .history
+        .title
+            font-size: 36px
+            span
+                font-size: 80px
+                padding-top: 10px
+        &__wrapp
+            flex-direction: column-reverse
+        &__img
+            width: 100%
+            min-width: 0
+            img
+                height: 180px
+        &__text
+            padding-right: 0
+            padding-top: 10px
+        &__gallery
+            &-right
+                .history__wrapp
+                    flex-direction: column
+        &__counter
+            &-item
+                text-align: center
+                line-height: 1.15
+
+    .directory
+        .title
+            padding-bottom: 40px
+            line-height: 1.15
+            span
+                font-size: 42px
+    
+    .dircarousel
+        .owl-nav
+            top: -76px
+
+    .news
+        .title
+            span
+                font-size: 42px
+
+    .person
+        padding-top: 40px
+        padding-bottom: 90px
+        .anchor
+            width: 8%
+            img
+                width: 100%
+        .photo
+            width: 90%
+            display: flex
+            justify-content: flex-end
+        .text
+            padding-right: 0
+            p
+                font-size: 16px
+
+    .container
+        max-width: 730px
 
     .export
         padding: 60px 0
@@ -1020,6 +1053,10 @@
         &__position
             font-size: 14px
 
+    .dircarousel
+        .owl-nav
+            top: -70px
+
     .news
         padding-bottom: 80px
         .title
@@ -1088,6 +1125,7 @@
 
     .directory
         .title
+            padding-bottom: 60px
             span
                 font-size: 24px
         &__wrapper
@@ -1097,6 +1135,14 @@
             margin-bottom: 30px
             &:last-child
                 margin-bottom: 0
+
+    .dircarousel
+        .owl-nav
+            top: -45px
+            width: calc(100% - 30px)
+            justify-content: space-between
+            right: 15px
+            display: flex
 
     .news
         .title

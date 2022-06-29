@@ -23,30 +23,38 @@ document.addEventListener("DOMContentLoaded", function () {
         $('.input__drop > input').attr('value', inptText);
     })
 
-    // var header = $('.header_top')
+    // const $header = $(".header--inner")
+	// let prevScroll
+	// let lastShowPos
 
-	// $(window).scroll(function () {
-	// 	if ($(this).scrollTop() > 25) {
-	// 		header.addClass("header-scroll");
-	// 	} else {
-	// 		header.removeClass("header-scroll");
-	// 	}
-    // });
-
-    const $header = $(".header--inner")
-	let prevScroll
-	let lastShowPos
-
-	$(window).on("scroll", function() {
-		const scrolled = $(window).scrollTop()
+	// $(window).on("scroll", function() {
+	// 	const scrolled = $(window).scrollTop()
 		
-		if (scrolled > 190 && scrolled > prevScroll) {
-			$header.addClass("header-scroll")
-			lastShowPos = scrolled
-		} else if (scrolled <= Math.max(lastShowPos - 100, 0)) {
-			$header.removeClass("header-scroll")
-		}
-		prevScroll = scrolled
+	// 	if (scrolled > 190 && scrolled > prevScroll) {
+	// 		$header.addClass("header-scroll")
+	// 		lastShowPos = scrolled
+	// 	} else if (scrolled <= Math.max(lastShowPos - 100, 0)) {
+	// 		$header.removeClass("header-scroll")
+	// 	}
+	// 	prevScroll = scrolled
+	// })
+
+	$('.dircarousel').owlCarousel({
+		nav: true,
+		items: 3,
+		dots: false,
+		navText: ['<svg width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.7769 8.55504C24.7602 8.36593 24.6811 8.11327 24.5547 7.97158L17.888 0.416108C17.5972 0.0214494 16.9976 0.0226951 16.6287 0.345424C16.2598 0.668463 16.2316 1.24201 16.5549 1.58272L21.9301 7.6659H1.66658C1.17582 7.6659 0.777771 8.06396 0.777771 8.55471C0.777771 9.04578 1.17583 9.44352 1.66658 9.44352H21.9301L16.5549 15.5267C16.2021 15.8674 16.3013 16.4515 16.6705 16.7745C17.0395 17.0976 17.5975 17.0743 17.8883 16.6936L24.555 9.13816C24.7333 8.94502 24.767 8.73576 24.7773 8.5547L24.7769 8.55504Z" fill="#0973BA"/></svg>', 'Вперёд'],
+		responsive: {
+            0: {
+                items: 1,
+            },
+            577: {
+                items: 2,
+            },
+            768: {
+                items: 3
+            }
+        },
 	})
     
     jQuery('img.svg').each(function () {
@@ -89,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(this).mask("+79999999999");
 	});
 	
-	if (window.matchMedia("(max-width: 991.90px)").matches) {
+	if (window.matchMedia("(max-width: 1199.90px)").matches) {
 		$('.header__menu, .header__link').appendTo('.header_mob');
 		$('.header_toggle').on('click', function () {
 			$('.header_mob').toggleClass('active');
@@ -231,3 +239,13 @@ $(window).scroll(function(){
 $(document).ready(function(){ 
 	scrollTracking1();
 });
+
+// var header = $('.header_top')
+
+// $(window).scroll(function () {
+// 	if ($(this).scrollTop() > 25) {
+// 		header.addClass("header-scroll");
+// 	} else {
+// 		header.removeClass("header-scroll");
+// 	}
+// });
