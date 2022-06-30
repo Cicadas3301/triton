@@ -1,14 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-    $('.has-child .subscroll').click(function (e) {
-        e.preventDefault();
-        $(this).parent().find('.sub-menu').stop().slideToggle();
-    })
+	$('.has-child .subscroll').click(function (e) {
+		e.preventDefault();
+		$(this).parent().find('.sub-menu').stop().slideToggle();
+	});
+
+	(function () {
+		var btn = $('.js-scroll');
+		btn.click(function () {
+			$("html, body").animate({
+				scrollTop: $($(this).attr("href")).offset().top + "px"
+			}, {
+				duration: 700
+			});
+			return false;
+		});
+	})();
+
+	$('.none-df').on('click', function () {
+		event.preventDefault();
+	})
 
     $('.menu__link--partner').click(function (e) {
-        e.preventDefault();
         $(this).siblings('.menu__item-drop').slideToggle();
         $(this).toggleClass('active');
+	})
+	
+    $('.menu__item-drop > .wrap > a').click(function (e) {
+        e.preventDefault();
+        $('.menu__item-drop').slideUp();
+        $('.menu__link--partner').removeClass('active');
     })
 
     $('.input__drop').click(function (e) {
