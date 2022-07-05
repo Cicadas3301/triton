@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		$('.header_toggle').on('click', function () {
 			$('.header_mob').toggleClass('active');
 			$('.header').toggleClass('active');
+			$(this).toggleClass('active');
 		})
 	}
 

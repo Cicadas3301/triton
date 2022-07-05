@@ -26,7 +26,7 @@
             display: inline-flex
 
 .page
-    z-index: 9
+    z-index: 9999
 
 .header
     &__menu
@@ -166,6 +166,19 @@
     to 
         width: 100%
 .directory
+    &--contact
+        .directory
+            &__wrapper
+                flex-wrap: wrap
+            &__cart
+                margin-bottom: 85px
+                width: calc(100% / 3 - 5px)
+                .op0
+                    opacity: 0
+            &__top
+                font-size: 30px
+                font-weight: 500
+                line-height: 1.05
     .title
         a
             display: none
@@ -272,6 +285,107 @@
         a
             color: #000
 
+.header__menu .menu__link:hover svg
+    transform: rotate(0deg)
+
+.header__menu
+    .menu__link.active
+        svg
+            transform: rotate(180deg)
+
+.header
+    &__link
+        span
+            a
+                color: #fff
+
+.footer
+    &__link
+        span
+            a
+                color: #000
+
+a
+    &:hover
+        text-decoration: none
+
+.news
+    .title
+        a
+            img
+                transition: .3s
+                width: 25px
+                height: 17px
+        a
+            &:hover
+                img
+                    width: 35px
+
+.news__item
+    .link
+        a
+            img
+                transition: .3s
+                width: 25px
+                height: 17px
+        a
+            &:hover
+                img
+                    width: 35px
+
+.region
+    &__link
+        a
+            img
+                transition: .3s
+                width: 25px
+                height: 17px
+        a
+            &:hover
+                img
+                    width: 35px
+
+.import
+    &__link
+        a
+            img
+                transition: .3s
+                width: 25px
+                height: 17px
+        a
+            &:hover
+                img
+                    width: 35px
+
+.export__link
+    img
+        transition: .3s
+        width: 25px
+        height: 17px
+    &:hover
+        img
+            width: 35px
+
+.header
+    &_toggle
+        &-close
+            display: none
+            width: 40px
+            height: 40px
+            path
+                fill: #fff
+        &.active
+            .header_toggle-open
+                display: none
+            .header_toggle-close
+                display: block
+            
+
+@media (max-width: 1800px)
+    .person
+        .text
+            padding-right: 150px
+            padding-left: 150px
 @media (max-width: 1500px)
     .person
         .text
@@ -686,6 +800,8 @@
             margin-top: 40px
             border: none
             border-top: 1px solid #000
+            .news_line.afterheight
+                display: none
         &__title
             margin-bottom: 25px
         &__img
@@ -806,6 +922,17 @@
 
 @media (max-width: 991.90px)
 
+    .directory
+        &--contact
+            .directory
+                &__cart
+                    margin-bottom: 40px
+                    width: calc(100% / 2 - 5px)
+                &__top
+                    font-size: 22px
+        &__tel
+            font-size: 14px
+
     .contacts
         margin-top: 40px
         &_title
@@ -835,6 +962,7 @@
             span
                 padding-left: 0
             img
+                margin-bottom: 30px
                 height: 200px
                 width: auto
                 margin-left: auto
@@ -1085,8 +1213,16 @@
             &__title
                 font-size: 36px
                 padding-bottom: 20px
+            &__set
+                button
+                    height: 55px
+                    width: 250px
 
 @media (max-width: 567.90px)
+    .adaptivehistory
+        &::after
+            display: none
+
     *
         box-sizing: border-box
 
@@ -1259,8 +1395,14 @@
         &__menu
             .menu
                 &__link
-                    font-size: 14px
+                    font-size: 13px
         &__wrapper
             flex-direction: column
             justify-content: flex-start
             font-size: 14px
+        &__link
+            span, .tel
+                font-size: 15px
+            .tel
+                &::before
+                    top: 0
